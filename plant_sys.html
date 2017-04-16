@@ -24,22 +24,6 @@
             microgear.connect(APPID);
         });
     </script>
-    <script>
-
-        document.getElementById('on').onclick= function () { send1() };
-        function send1() {
-
-            console.log('run1');
-            microgear.chat('Plant', '1');
-            alert("on!");
-        }
-        document.getElementById('off').onclick= function () { send2() };
-        function send2() {
-            console.log('run0');
-            microgear.chat('Plant', '0');
-            alert("off!");
-        }
-    </script>
 
     <style>
 #cam{
@@ -74,6 +58,18 @@ button{
 </div>
 <br>
 <div style="margin:auto; text-align:center">
+    <script>
+
+        $(document).ready(function () {
+           $('#on').click(function () {
+               microgear.chat('Plant','1');
+           });
+            $('#off').click(function () {
+                microgear.chat('Plant','0');
+            })
+
+        });
+    </script>
 
 <button id="on">ON</button>
 <button id="off">OFF</button>
