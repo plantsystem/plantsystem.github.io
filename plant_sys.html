@@ -45,6 +45,24 @@ button{
 #off{
 	background-color:#F63
 	}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
 </style>
 </head>
 
@@ -57,7 +75,7 @@ button{
 <div id="cam">
 </div>
 <br>
-<div style="margin:auto; text-align:center">
+<div style="margin:auto; text-align:center;">
     <script>
 
         $(document).ready(function () {
@@ -71,8 +89,12 @@ button{
         });
     </script>
 
-<button id="on">ON</button>
-<button id="off">OFF</button>
+<img src="on.png" id="on">
+    <label class="switch">
+        <input type="checkbox">
+        <div class="slider round"></div>
+    </label>
+<img src="off.png" id="off">
 </div>
 </body>
 </html>
