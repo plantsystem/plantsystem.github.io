@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<script src="https://cdn.netpie.io/microgear.js"></script>
 <style>
 #cam{
 	width:80%;
@@ -27,10 +28,46 @@ button{
 </head>
 
 <body>
+
+<script type="text/javascript">
+    const APPID = "CNX";
+    const KEY = "g7Mf20C7129wJCP";
+    const SECRET = "trk6msQ1UGLFAe866HAZT711C"
+    const DEVICE_NAME = "water";
+    microgear = Microgear.create({
+        key: KEY,
+        secret: SECRET,
+        alias: DEVICE_NAME
+    });
+    microgear.on('connected', function () {
+        microgear.setAlias(DEVICE_NAME);
+        console.log('connected')
+    });
+    // connect
+    microgear.resettoken(function (err) {
+        microgear.connect(APPID);
+    });
+</script>
+
+<script>
+    document.getElementById('on').click(function () {
+        console.log('hello')
+        microgear.chat('water', '1')
+        alert("on!")
+    });
+    document.getElementById('off').click(function () {
+        console.log('hello')
+        microgear.chat('water', '0')
+        alert("off!")
+    });
+</script>
+
+
 <div id="cam">
 </div>
 <br>
 <div style="margin:auto; text-align:center">
+
 <button id="on">ON</button>
 <button id="off">OFF</button>
 </div>
