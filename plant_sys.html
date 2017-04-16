@@ -51,12 +51,12 @@ button{
 
 
 <script>
-    document.getElementById('on').click(function () {
+    document.getElementById('on').onclick(function () {
         console.log('run1')
         microgear.chat('water', '1')
         alert("on!")
     });
-    document.getElementById('off').click(function () {
+    document.getElementById('off').onclick(function () {
         console.log('run0')
         microgear.chat('water', '0')
         alert("off!")
