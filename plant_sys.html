@@ -92,7 +92,7 @@ button{
 </style>
 </head>
 
-<body>
+<body onload="createImageLayer()">
 <script>
 
 </script>
@@ -100,10 +100,10 @@ button{
 
 
 
-<div id="cam" onload="createImageLayer()">
-    <img src="">
-    <img src="">
-    <img src="">
+<div id="cam" >
+    <img src="./?action=snapshot&amp;n=5632" style="position: absolute; z-index: -1;">
+    <img src="./?action=snapshot&amp;n=5631" style="position: absolute; z-index: 5631;">
+    <img src="./?action=snapshot&amp;n=5630" style="position: absolute; z-index: 5630;">
     <noscript>&lt;img src="./?action=snapshot" /&gt;</noscript>
 </div>
 <br>
