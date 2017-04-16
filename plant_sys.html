@@ -3,8 +3,28 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-<script src="https://cdn.netpie.io/microgear.js"></script>
-<style>
+<script src="microgear.jss"></script>
+<script type="text/javascript">
+        const APPID = "CNX";
+        const KEY = "g7Mf20C7129wJCP";
+        const SECRET = "trk6msQ1UGLFAe866HAZT711C"
+        const DEVICE_NAME = "water";
+        microgear = Microgear.create({
+            key: KEY,
+            secret: SECRET,
+            alias: DEVICE_NAME
+        });
+        microgear.on('connected', function () {
+            microgear.setAlias(DEVICE_NAME);
+            console.log('connected')
+        });
+        // connect
+        microgear.resettoken(function (err) {
+            microgear.connect(APPID);
+        });
+    </script>
+
+    <style>
 #cam{
 	width:80%;
 	height:560px;
@@ -29,25 +49,6 @@ button{
 
 <body>
 
-<script type="text/javascript">
-    const APPID = "CNX";
-    const KEY = "g7Mf20C7129wJCP";
-    const SECRET = "trk6msQ1UGLFAe866HAZT711C"
-    const DEVICE_NAME = "water";
-    microgear = Microgear.create({
-        key: KEY,
-        secret: SECRET,
-        alias: DEVICE_NAME
-    });
-    microgear.on('connected', function () {
-        microgear.setAlias(DEVICE_NAME);
-        console.log('connected')
-    });
-    // connect
-    microgear.resettoken(function (err) {
-        microgear.connect(APPID);
-    });
-</script>
 
 <script>
     document.getElementById('on').click(function () {
