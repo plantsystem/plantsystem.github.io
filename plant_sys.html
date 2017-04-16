@@ -5,6 +5,7 @@
 <title>Untitled Document</title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="microgear.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
 <script type="text/javascript">
         const APPID = "CNX";
         const KEY = "g7Mf20C7129wJCP";
@@ -27,8 +28,8 @@
 
     <style>
 #cam{
-	width:80%;
-	height:560px;
+    width: 640px;
+	height:480px;
 	margin:auto;
 	background-color:black;
 	}
@@ -54,12 +55,15 @@ button{
 </head>
 
 <body>
+<script>
 
+</script>
 
 
 
 
 <div id="cam">
+    <img src="http://192.168.2.22:8080/?action=stream">
 </div>
 <br>
 <div style="margin:auto; text-align:center;">
