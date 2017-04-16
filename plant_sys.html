@@ -9,7 +9,7 @@
         const APPID = "CNX";
         const KEY = "g7Mf20C7129wJCP";
         const SECRET = "trk6msQ1UGLFAe866HAZT711C"
-        const DEVICE_NAME = "water";
+        const DEVICE_NAME = "Plant";
         microgear = Microgear.create({
             key: KEY,
             secret: SECRET,
@@ -29,15 +29,14 @@
         document.getElementById('on').onclick= function () { send1() };
         function send1() {
 
-
             console.log('run1');
-            microgear.chat('water', '1');
+            microgear.chat('Plant', '1');
             alert("on!");
         }
         document.getElementById('off').onclick= function () { send2() };
         function send2() {
             console.log('run0');
-            microgear.chat('water', '0');
+            microgear.chat('Plant', '0');
             alert("off!");
         }
     </script>
