@@ -40,9 +40,13 @@ button{
 	color:#fff;
 	}
 #on{
+    width: 80px;
+    height: 80px;
 	background-color:#0F9;
 	}
 #off{
+    width: 80px;
+    height: 80px;
 	background-color:#F63
 	}
 /* The switch - the box around the slider */
@@ -89,12 +93,16 @@ button{
         });
     </script>
 
-<img src="on.png" id="on">
+<div id="on">
+    <img src="on.png" style="width:100% " >
+</div>
     <label class="switch">
         <input type="checkbox">
         <div class="slider round"></div>
     </label>
-<img src="off.png" id="off">
+<div id="off">
+    <img src="off.png" style="width:100% " >
+</div>
 </div>
 </body>
 </html>
