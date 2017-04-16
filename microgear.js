@@ -3237,7 +3237,7 @@ Microgear.create = function(param) {
 			};
 
 			var revokecode = atok.revokecode.replace(/\//g,'_');
-	        var apiurl = 'https://'+GEARAUTH+':'+GEARAPIPORT+'/api/revoke/'+atok.token+'/'+revokecode;
+	        var apiurl = 'https://'+GEARAUTH+':'+GEARAPISECUREPORT+'/api/revoke/'+atok.token+'/'+revokecode;
 			xmlHttp.open("GET", apiurl, true); //true for asynchronous 
 	    	xmlHttp.send(null);
 		}
