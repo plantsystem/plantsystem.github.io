@@ -32,8 +32,8 @@
 	margin:auto;
 	}
 button{
-	width:80px;
-	height:80px;
+	width:35%;
+    margin:5%;
     border-radius: 80px;
     border: solid #c5c5c5 1px;
     text-align: center;
@@ -68,20 +68,16 @@ button{
         $(document).ready(function () {
            $('#on').click(function () {
                microgear.chat('Plant','1');
+               delay (5000);
+               microgear.chat('Plant','0');
            });
-            $('#off').click(function () {
-                microgear.chat('Plant','0');
-            })
+
 
         });
     </script>
 
 <button id="on">
     <img src="on.png" style="width: 100%;margin: auto ">
-</button>
-
-<button id="off">
-    <img src="off.png" style="width: 100%; margin: auto">
 </button>
 
 </div>
