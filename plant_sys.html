@@ -89,8 +89,10 @@ p{
         $(document).ready(function () {
            $('#on').click(function () {
                microgear.chat('Plant','1');
-               delay (5000);
-               microgear.chat('Plant','0');
+               setTimeout(function () {
+                   microgear.chat('Plant','0');
+               },5000);
+
            });
 
 
